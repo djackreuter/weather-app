@@ -16,7 +16,6 @@ export class WeatherProvider {
   // returns observable for component to subscribe to
   getWeather(city, state) {
     return this.http.get(this.url + '/' + state + '/' + city + '.json')
-    .map((res: Response) => res.json());
   }
 
 }
